@@ -50,7 +50,7 @@ todayInput.value = `${yyyy}-${mm}-${dd}`;
 // Hedef tarih değiştirildiğinde sayacı güncelle
 targetInput.addEventListener("change", updateCountdown);
 // İstersen bunu kendi tarihin yap
-targetInput.value = "2026-08-15";
+
 
 // Gün hesabı
 function updateCountdown(){
