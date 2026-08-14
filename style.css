@@ -1,0 +1,1139 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+   body{
+
+    background:linear-gradient(
+        135deg,
+        #405880 0%,
+        #344055 30%,
+        #58577f 65%,
+        #6966a3 100%
+    );
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background-size:300% 300%;
+
+    animation:bgMove 12s ease infinite;
+
+
+}
+
+/* Giriş */
+
+#opening{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    cursor:pointer;
+    z-index:100;
+}
+
+#opening img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+/* Menü */
+
+#menu{
+
+    display:none;
+
+    width:90%;
+    max-width:380px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    background:url("image/background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:30px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+#menu h1{
+
+    color:#2458c5;
+
+    margin-bottom:18px;
+
+    font-size:35px;
+
+}
+
+
+#menu button{
+
+    width:100%;
+
+    height:58px;
+
+    margin-bottom:10px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.88);
+
+    backdrop-filter:blur(6px);
+
+    font-size:18px;
+
+    text-align:left;
+
+    padding-left:20px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    transition:.2s;
+
+}
+
+#menu button:hover{
+
+    transform:scale(1.02);
+
+}
+
+#menu button:active{
+
+    transform:scale(.98);
+
+}
+/* ========================= */
+/* COUNTDOWN SAYFASI */
+/* ========================= */
+
+#countdown-page{
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:380px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+#back-btn{
+
+    position:absolute;
+
+    left:0;
+
+    top:-60px;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+}
+
+.countdown-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:22px;
+
+}
+
+.hourglass{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+
+.hourglass img{
+
+    width:180px;
+
+    height:auto;
+
+    animation:float 2.5s ease-in-out infinite;
+
+    position:relative;
+
+    z-index:2;
+
+}
+.hourglass::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-12px;
+
+    width:110px;
+
+    height:18px;
+
+    background:rgba(0,0,0,.18);
+
+    border-radius:50%;
+
+    filter:blur(10px);
+
+    animation:shadow 2.5s ease-in-out infinite;
+
+    z-index:1;
+
+}
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes shadow{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:.18;
+
+    }
+
+    50%{
+
+        transform:scale(.82);
+
+        opacity:.10;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:.18;
+
+    }
+
+}
+
+#days{
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+.date-group{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+    text-align:left;
+
+}
+
+.date-group label{
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+.date-group input{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:18px;
+
+    padding:0 15px;
+
+    font-size:18px;
+
+    background:white;
+
+    outline:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/* Music Sayfası */
+
+#music-page{
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:380px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+#music-page h1{
+
+    margin-bottom:10px;
+
+    font-size:35px;
+
+}
+
+#music-page p{
+
+    margin-bottom:30px;
+
+    font-size:20px;
+
+}
+
+#music-back{
+
+    position:absolute;
+
+    left:0;
+
+    top:-60px;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+}
+
+#spotify-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+/* ========================= */
+/* TO-DO LIST SAYFASI */
+/* ========================= */
+
+#todo-page{
+
+    display:none;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:380px;
+    color:white;
+
+}
+
+#todo-back{
+
+    position:absolute;
+    left:0;
+    top:-60px;
+
+    border:none;
+    border-radius:15px;
+    padding:10px 18px;
+
+    cursor:pointer;
+
+}
+
+#todo-page h1{
+
+    text-align:center;
+    margin-bottom:25px;
+    font-size:34px;
+
+}
+
+#todo-list{
+
+    list-style:none;
+    margin-bottom:20px;
+
+    max-height:360px;
+    overflow-y:auto;
+
+}
+
+#todo-list li{
+
+    background:white;
+    color:black;
+
+    border-radius:16px;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    transition:.25s;
+
+}
+
+.left{
+
+    display:flex;
+    align-items:center;
+
+    cursor:pointer;
+
+    flex:1;
+
+}
+
+.heart{
+
+    font-size:23px;
+    margin-right:12px;
+
+}
+
+.text{
+
+    font-size:18px;
+
+    transition:.2s;
+
+}
+
+.completed .text{
+
+    text-decoration:line-through;
+    text-decoration-thickness:1px;
+    opacity:.55;
+
+}
+
+.delete{
+
+    background:none;
+    border:none;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+.add-task{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+#new-task{
+
+    flex:1;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:14px;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+#add-task{
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:14px 18px;
+
+    cursor:pointer;
+
+    background:white;
+
+    font-size:16px;
+
+    transition:.2s;
+
+}
+
+#add-task:hover{
+
+    transform:scale(1.04);
+
+}
+/* ========================= */
+/* QUIZ SAYFASI */
+/* ========================= */
+
+#quiz-page{
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:380px;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+#quiz-back{
+
+    position:absolute;
+
+    left:0;
+
+    top:-60px;
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:10px 18px;
+
+    cursor:pointer;
+
+}
+
+#quiz-page h1{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+#question-number{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+}
+
+#question{
+
+    margin-bottom:25px;
+
+    font-size:24px;
+
+    line-height:34px;
+
+}
+
+#options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.option{
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    border-radius:16px;
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.option:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* Seçilen şık */
+
+.option.selected{
+
+    font-weight:bold;
+
+}
+
+.option.selected::before{
+
+    content:"⚫ ";
+
+}
+
+.option:not(.selected)::before{
+
+    content:"⚪ ";
+
+}
+
+.quiz-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:30px;
+
+}
+
+.quiz-buttons button{
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:12px 20px;
+
+    cursor:pointer;
+
+}
+
+/* ========================= */
+/* SONUÇ SAYFASI */
+/* ========================= */
+
+#result-page{
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:90%;
+
+    max-width:380px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+#result-page h1{
+
+    font-size:36px;
+
+    margin-bottom:25px;
+
+}
+
+#heart-score{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+#score-text{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+#result-message{
+
+    font-size:20px;
+
+    line-height:30px;
+
+    margin-bottom:30px;
+
+}
+
+#result-back{
+
+    border:none;
+
+    border-radius:15px;
+
+    padding:14px 22px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+}
+/* ========================= */
+/* WHY PAGE */
+/* ========================= */
+
+#why-page{
+
+    display:none;
+
+    width:90%;
+    max-width:380px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+#why-back{
+
+    position:fixed;
+
+    top:25px;
+
+    left:25px;
+
+    z-index:9999;
+
+    background:white;
+
+    color:#333;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:10px 18px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
+}
+
+#why-page h1{
+
+    font-size:40px;
+
+    margin-bottom:10px;
+
+}
+
+#why-page p{
+
+    margin-bottom:35px;
+
+}
+
+/* ========================= */
+/* Zarflar */
+/* ========================= */
+
+.envelope-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+    justify-items:center;
+
+}
+
+/* Satranç dizilimi */
+
+.envelope:nth-child(1),
+.envelope:nth-child(3),
+.envelope:nth-child(5){
+
+    transform:translateY(-15px);
+
+}
+
+.envelope:nth-child(2),
+.envelope:nth-child(4),
+.envelope:nth-child(6){
+
+    transform:translateY(25px);
+
+}
+
+.envelope{
+
+    width:140px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.envelope:hover{
+
+    scale:1.05;
+
+}
+
+.envelope.open{
+
+    scale:1.1;
+
+    z-index:100;
+
+}
+
+.envelope-img{
+
+    width:140px;
+
+}
+
+/* ========================= */
+/* Mektup */
+/* ========================= */
+
+.paper{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:25px;
+
+    transform:translateX(-50%);
+
+    width:150px;
+
+    height:0;
+
+    overflow:hidden;
+
+    background:white;
+
+    border-radius:12px;
+
+    transition:.4s;
+
+    color:#444;
+
+    padding:0 15px;
+
+}
+
+.paper h3{
+
+    margin-top:18px;
+
+    color:#4b73ff;
+
+}
+
+.paper p{
+
+    font-size:15px;
+
+    line-height:23px;
+
+}
+
+.envelope.open .paper{
+
+    width:220px;
+
+    height:190px;
+
+    bottom:45px;
+
+    padding:15px;
+
+}
+/* ========================= */
+/* FLOATING HEARTS */
+/* ========================= */
+
+.floating-hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.floating-hearts span{
+
+    position:absolute;
+
+    font-size:24px;
+
+    animation:floatHeart 4s ease-in-out infinite;
+
+}
+
+/* Konumlar */
+
+.floating-hearts span:nth-child(1){
+
+    top:8%;
+    left:8%;
+    animation-delay:0s;
+
+}
+
+.floating-hearts span:nth-child(2){
+
+    top:18%;
+    right:12%;
+    animation-delay:.4s;
+
+}
+
+.floating-hearts span:nth-child(3){
+
+    top:35%;
+    left:18%;
+    animation-delay:.8s;
+
+}
+
+.floating-hearts span:nth-child(4){
+
+    top:48%;
+    right:20%;
+    animation-delay:1.2s;
+
+}
+
+.floating-hearts span:nth-child(5){
+
+    top:65%;
+    left:10%;
+    animation-delay:1.6s;
+
+}
+
+.floating-hearts span:nth-child(6){
+
+    top:80%;
+    right:10%;
+    animation-delay:2s;
+
+}
+
+.floating-hearts span:nth-child(7){
+
+    top:12%;
+    left:45%;
+    animation-delay:2.4s;
+
+}
+
+.floating-hearts span:nth-child(8){
+
+    top:58%;
+    left:45%;
+    animation-delay:2.8s;
+
+}
+
+.floating-hearts span:nth-child(9){
+
+    top:85%;
+    left:35%;
+    animation-delay:3.2s;
+
+}
+
+.floating-hearts span:nth-child(10){
+
+    top:28%;
+    right:38%;
+    animation-delay:3.6s;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}

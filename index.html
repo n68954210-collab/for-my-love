@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="floating-hearts">
+
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+
+</div>
+<!-- Giriş Ekranı -->
+<div id="opening">
+
+    <img src="image/opening.png" alt="Opening">
+
+</div>
+
+<!-- Menü -->
+<div id="menu">
+
+    <h1>𝗺𝗲𝗻𝘂</h1>
+
+    <button id="countdown-btn">── ⋆⋅🗓️⋅⋆ ──</button>
+
+    <button id="music-btn">>── ⋆⋅🎧⋅⋆ ──</button>
+
+    <button id="todo-btn">>── ⋆⋅𖠋♡𖠋⋅⋆ ──</button>
+
+    <button id="quiz-btn">>── ⋆⋅❔⋅⋆ ──</button>
+
+    <button id="why-btn">>── ⋆⋅♡ ︎⋅⋆ ──</button>
+
+</div>
+<!-- COUNTDOWN SAYFASI -->
+
+<div id="countdown-page">
+
+    <button id="back-btn">← Geri</button>
+
+    <div class="countdown-box">
+
+        <div class="hourglass">
+               <img src="image/imagehourglass.png" alt="Hourglass">
+        </div>
+
+        <h1 id="days">0 Gün</h1>
+
+        <div class="date-group">
+
+            <label>📅 Bugün</label>
+
+            <input
+                type="date"
+                id="today-date"
+            >
+
+        </div>
+
+        <div class="date-group">
+
+            <label>📅 Buluşma Günü</label>
+
+            <input
+                type="date"
+                id="target-date"
+            >
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+<!-- Music Sayfası -->
+
+<div id="music-page">
+
+    <button id="music-back">← Geri</button>
+
+    <h1>🎵 Music</h1>
+
+    <p>dinleyince aklıma sen geliyorsun</p>
+
+    <a href="https://open.spotify.com/playlist/10yLxNDl7ybWdKcosxCuai?si=OVFMom_9RIukG6Zh00GdoQ&utm_source=copy-link" target="_blank">
+
+        <button id="spotify-btn">🎧 Spotify Playlist</button>
+
+    </a>
+
+</div>
+<!-- To-Do List Sayfası -->
+
+<div id="todo-page">
+
+    <button id="todo-back">← Geri</button>
+
+    <h1>✅ To-Do List</h1>
+
+    <!-- Liste JavaScript tarafından doldurulacak -->
+    <ul id="todo-list"></ul>
+
+    <div class="add-task">
+
+        <input
+            type="text"
+            id="new-task"
+            placeholder="Yeni aktivite..."
+        >
+
+        <button id="add-task">
+            ➕ Ekle
+        </button>
+
+    </div>
+    </div> 
+    <!-- QUIZ SAYFASI -->
+
+<div id="quiz-page">
+
+    <button id="quiz-back">← Geri</button>
+
+    <h1>❤️ QUIZ</h1>
+
+    <p id="question-number">Soru 1 / 5</p>
+
+    <h2 id="question"></h2>
+
+    <div id="options">
+
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+        <button class="option"></button>
+
+    </div>
+
+    <div class="quiz-buttons">
+
+        <button id="prev-question">← Önceki</button>
+
+        <button id="next-question">Sonraki →</button>
+
+    </div>
+
+</div>
+<!-- SONUÇ SAYFASI -->
+
+<div id="result-page">
+
+    <h1>❤️ Sonuç ❤️</h1>
+
+    <div id="heart-score"></div>
+
+    <h2 id="score-text"></h2>
+
+    <p id="result-message"></p>
+
+    <button id="result-back">🏠 Menüye Dön</button>
+
+</div>
+<!-- ========================= -->
+<!-- WHY SAYFASI -->
+<!-- ========================= -->
+
+<div id="why-page">
+
+    <button id="why-back">← Geri</button>
+
+    <h1>💙 Why?</h1>
+
+    <p>Zarflardan birini seç...</p>
+
+    <div class="envelope-grid">
+
+        <!-- 1 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Gülüşün</h3>
+                <p>
+                    Gülüşünü görmek bütün
+                    günümü güzelleştiriyor.
+                    Sen gülünce ben de
+                    istemeden gülüyorum. ❤️
+                </p>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Gözlerin</h3>
+                <p>
+                    Gözlerine baktığımda
+                    bütün dünya duruyormuş
+                    gibi hissediyorum.
+                </p>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Sesin</h3>
+                <p>
+                    Sesini duymak
+                    günümün en güzel
+                    anlarından biri oluyor.
+                </p>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Sarılman</h3>
+                <p>
+                    Kokunu içime 
+                    çekmek en 
+                    huzur verici
+                    şey 
+                </p>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Biz</h3>
+                <p>
+                    Daha çok anı
+                    biriktireceğimiz günleri
+                    sabırsızlıkla bekliyorum.
+                </p>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="envelope">
+            <img src="image/envelope.png" class="envelope-img">
+
+            <div class="paper">
+                <h3>Her Şeyin</h3>
+                <p>
+                    Çünkü seni,
+                    olduğun gibi
+                    seviyorum. 
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
