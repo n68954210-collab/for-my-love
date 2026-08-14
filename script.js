@@ -47,10 +47,20 @@ const dd = String(today.getDate()).padStart(2, "0");
 
 todayInput.value = `${yyyy}-${mm}-${dd}`;
 
-// Hedef tarih değiştirildiğinde sayacı güncelle
-targetInput.addEventListener("change", updateCountdown);
-// İstersen bunu kendi tarihin yap
+// Hedef tarihi kaydet ve sayacı güncelle
+targetInput.addEventListener("change", () => {
+    localStorage.setItem("targetDate", targetInput.value);
+    updateCountdown();
+});
 
+// Daha önce kaydedilmiş tarih varsa onu getir
+const savedDate = localStorage.getItem("targetDate");
+
+if (savedDate) {
+    targetInput.value = savedDate;
+    updateCountdown();
+}
+updateCountdown();
 
 // Gün hesabı
 function updateCountdown(){
