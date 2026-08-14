@@ -47,6 +47,8 @@ const dd = String(today.getDate()).padStart(2, "0");
 
 todayInput.value = `${yyyy}-${mm}-${dd}`;
 
+// Hedef tarih değiştirildiğinde sayacı güncelle
+targetInput.addEventListener("change", updateCountdown);
 // İstersen bunu kendi tarihin yap
 targetInput.value = "2026-08-15";
 
